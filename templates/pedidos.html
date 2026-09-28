@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedidos - Cafetería</title>
+</head>
+<body>
+    <h1>Lista de Pedidos</h1>
+    <a href="/">← Volver al inicio</a>
+    <br><br>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID Pedido</th>
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ped in pedidos %}
+            <tr>
+                <td>{{ ped.idpedido }}</td>
+                <td>{{ ped.cliente }}</td>
+                <td>{{ ped.fecha }}</td>
+                <td>{{ ped.estado }}</td>
+                <td>${{ ped.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
