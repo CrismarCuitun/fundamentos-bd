@@ -9,10 +9,11 @@
     <a href="/">← Volver al inicio</a>
     <br><br>
 
+    <!-- TABLA SOLO DE VISUALIZACIÓN (SIN BOTONES DENTRO) -->
     <table border="1" cellpadding="8" cellspacing="0">
         <thead>
             <tr>
-                <th>ID Pedido</th>
+                <th>ID</th>
                 <th>Cliente</th>
                 <th>Fecha</th>
                 <th>Estado</th>
@@ -31,5 +32,20 @@
             {% endfor %}
         </tbody>
     </table>
+
+    <br><br>
+
+    <!-- ÚNICOS 3 BOTONES DEBAJO DE LA TABLA -->
+    <a href="/agregar_pedido">
+        <button style="padding: 10px 20px; margin-right: 10px;">Agregar</button>
+    </a>
+
+    <a href="/actualizar_pedido">
+        <button style="padding: 10px 20px; margin-right: 10px;">Actualizar</button>
+    </a>
+
+    <a href="/borrar_pedido">
+        <button style="padding: 10px 20px;">Borrar</button>
+    </a>
 </body>
 </html>
