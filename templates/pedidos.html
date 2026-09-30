@@ -36,7 +36,7 @@
     <br><br>
 
     <!-- ÚNICOS 3 BOTONES DEBAJO DE LA TABLA -->
-    <a href="/agregar_pedido">
+    <!-- <a href="/agregar_pedido">
         <button style="padding: 10px 20px; margin-right: 10px;">Agregar</button>
     </a>
 
@@ -46,6 +46,23 @@
 
     <a href="/borrar_pedido">
         <button style="padding: 10px 20px;">Borrar</button>
+    </a> -->
+    <!-- SECCIÓN DE BOTONES DEBAJO DE LA TABLA -->
+    <a href="/agregar_pedido">
+        <button style="padding: 10px 20px; margin-right: 10px;">Agregar</button>
+    </a>
+
+    <!-- Formulario para ingresar el ID del pedido a actualizar -->
+    <form action="/buscar_actualizar_pedido" method="POST" style="display: inline-block; margin-right: 10px;">
+        <input type="number" name="idpedido" placeholder="ID a actualizar" required style="padding: 8px; width: 110px;">
+        <button type="submit" style="padding: 10px 20px;">Actualizar</button>
+    </form>
+
+    <a>
+<form action="/borrar_pedido" method="POST" style="display: inline-block;">
+    <input type="number" name="idpedido" placeholder="ID a borrar" required style="padding: 8px; width: 100px;">
+    <button type="submit" style="padding: 10px 20px;" onclick="return confirm('¿Seguro que deseas eliminar este pedido?');">Borrar</button>
+</form>
     </a>
 </body>
 </html>

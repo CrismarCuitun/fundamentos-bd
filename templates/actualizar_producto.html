@@ -1,1 +1,31 @@
-actualizar_producto.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Producto</title>
+</head>
+<body>
+    <h1>Actualizar Producto</h1>
+    <p>Ingresa el ID del producto que deseas modificar y sus nuevos datos:</p>
+    
+    <form action="/actualizar_producto" method="POST">
+        <label>ID del Producto a actualizar:</label><br>
+        <input type="number" name="idproducto" placeholder="Ej. 20" required><br><br>
+        
+        <label>Nuevo Nombre:</label><br>
+        <input type="text" name="nombre" placeholder="Nombre del producto" required><br><br>
+        
+        <label>Nueva Categoría:</label><br>
+        <input type="text" name="categoria" placeholder="Categoría" required><br><br>
+        
+        <label>Nuevo Precio:</label><br>
+        <input type="number" step="0.01" name="precio" placeholder="0.00" required><br><br>
+        
+        <label>Nuevo Stock:</label><br>
+        <input type="number" name="stock" placeholder="Cantidad disponible" required><br><br>
+        
+        <button type="submit" style="padding: 10px 20px;">Guardar Cambios</button>
+        <a href="/productos"><button type="button" style="padding: 10px 20px;">Cancelar</button></a>
+    </form>
+</body>
+</html>

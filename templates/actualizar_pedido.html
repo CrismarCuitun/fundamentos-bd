@@ -1,1 +1,33 @@
-actualizar_pedido.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Pedido</title>
+</head>
+<body>
+    <h1>Actualizar Pedido #{{ pedido.idpedido }}</h1>
+
+    <form action="/actualizar_pedido/{{ pedido.idpedido }}" method="POST">
+        
+        <!-- Nombre del Cliente -->
+        <label for="nombre_cliente">Nombre del Cliente:</label><br>
+        <input type="text" name="nombre_cliente" id="nombre_cliente" value="{{ pedido.nombre_cliente }}" required><br><br>
+
+        <!-- Fecha del Pedido -->
+        <label for="fecha_pedido">Fecha de Pedido:</label><br>
+        <input type="date" name="fecha_pedido" id="fecha_pedido" value="{{ pedido.fecha_pedido }}" required><br><br>
+
+        <!-- Estado del Pedido -->
+        <label for="estado">Estado:</label><br>
+        <select name="estado" id="estado" required>
+            <option value="Pendiente" {% if pedido.estado == 'Pendiente' %}selected{% endif %}>Pendiente</option>
+            <option value="Entregado" {% if pedido.estado == 'Entregado' %}selected{% endif %}>Entregado</option>
+        </select><br><br>
+
+        <!-- Botones -->
+        <button type="submit">Actualizar Pedido</button>
+        <a href="/pedidos"><button type="button">Cancelar</button></a>
+
+    </form>
+</body>
+</html>

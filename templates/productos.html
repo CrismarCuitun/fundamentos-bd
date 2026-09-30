@@ -44,8 +44,11 @@
         <button style="padding: 10px 20px; margin-right: 10px;">Actualizar</button>
     </a>
 
-    <a href="/borrar_producto">
-        <button style="padding: 10px 20px;">Borrar</button>
+    <a>
+<form action="/borrar_producto" method="POST" style="display: inline-block;">
+    <input type="number" name="idproducto" placeholder="ID del producto" required style="padding: 8px; width: 120px;">
+    <button type="submit" style="padding: 10px 20px;" onclick="return confirm('¿Seguro que deseas eliminar este producto?');">Borrar</button>
+</form>
     </a>
 </body>
 </html>
